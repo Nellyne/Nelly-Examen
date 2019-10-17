@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examen Nelly</title>
+	
+	 
+
+	
+<!----Enlace a bootstrap------->
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	 
+<!----Enlace a la carpeta de estilos------->
+	<link rel="stylesheet" href="style.css">
+	  <style>
+		  
+		  #lanzar{ padding: 200px;}
+	
+	</style>
+
+</head>
+<body>
+	<div class="container">
+	<h1 id="lanzar">Exámen Nelly</h1>
+	</div>
+	
+<button onclick="aleatorio()" class="BotonClic">BOTÓN</button>
+	
+	
+	
+	
+	
+<script>
+
+var imagenes=[
+	"001.jpg",
+		"002.jpg",
+		"003.jpg",
+		"004.jpg",
+		"001.jpg"
+	
+]
+	
+	
+	
+	
+	
+	var personajes=[
+	"Mickey Mouse ",
+		"Elsa",
+		"Ariel",
+		"Minnie Mouse",
+		"Bella",
+		"Pato Donald",
+		"Jasmine",
+		"Goofy",
+		"Úrsula",
+		"Anna",
+		"Pocahontas",
+		"Simba",
+		"Stich"];
+	
+	function elrandom(min, max) {
+  		return Math.floor(Math.random() * (max - min) ) + min;
+	}
+	
+	function aleatorio(){
+		document.getElementById("lanzar").innerHTML= personajes[elrandom(0,personajes.length)];
+		document.getElementById("lanzar").style.backgroundImage="url('img/001.jpg')";
+	}
+	
+
+	
+
+	</script>
+</body>
+</html>
